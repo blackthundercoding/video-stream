@@ -34,32 +34,7 @@ async def _human_time_duration(seconds):
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_, m: Message):
     if m.chat.type == "private":
-        await m.reply_text(
-            f"✨ **Hello there, I am a telegram group video streaming bot.**\n\n💭 **I was created to stream videos in group "
-            f"video chats easily.**\n\n❔ **To find out how to use me, please press the help button below** 👇🏻",
-            reply_markup=InlineKeyboardMarkup(
-                [[
-                    InlineKeyboardButton(
-                        "➕ Add me to your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-                ], [
-                    InlineKeyboardButton(
-                        "❔ HOW TO USE THIS BOT", callback_data="cbguide")
-                ], [
-                    InlineKeyboardButton(
-                        "🌐 Terms & Condition", callback_data="cbinfo")
-                ], [
-                    InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/VeezSupportGroup"),
-                    InlineKeyboardButton(
-                        "📣 Channel", url="https://t.me/levinachannel")
-                ], [
-                    InlineKeyboardButton(
-                        "👩🏻‍💻 Developer", url="https://t.me/dlwrml")
-                ], [
-                    InlineKeyboardButton(
-                        "📚 All Command List", callback_data="cblist")
-                ]]
-            ))
+        await m.reply_text()
     else:
         await m.reply_text("**✨ bot is online now ✨**",
                            reply_markup=InlineKeyboardMarkup(
